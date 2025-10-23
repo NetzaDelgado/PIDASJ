@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIDASJ - Plataforma Integrada de Datos y Analítica en Salud</title>
-    <!-- Carga de Tailwind CSS -->
+    <title>PIDASJ - Plataforma de Datos de Salud Jalisco</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Fuente Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -35,21 +33,24 @@
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
 
-    <!-- Encabezado y Navegación -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="text-2xl font-extrabold text-green-700">PIDASJ</span>
+    <!-- Barra de Navegación -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-green-700">PIDASJ</span>
+                    </div>
                 </div>
-                <!-- Menú de Navegación -->
                 <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
                     <a href="#inicio" class="inline-flex items-center px-1 pt-1 border-b-2 border-green-600 text-base font-medium text-gray-900">
                         Inicio
                     </a>
                     <a href="#problema" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-base font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
                         El Problema
+                    </a>
+                    <a href="#impacto" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-base font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
+                        Impacto
                     </a>
                     <a href="#solucion" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-base font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
                         La Solución
@@ -61,89 +62,117 @@
                         Conectividad
                     </a>
                 </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Sección Hero (Inicio) -->
-        <section id="inicio" class="relative bg-green-700 text-white overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-32">
-                <div class="relative z-10 text-center md:text-left md:w-3/5">
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
-                        <span class="block">PIDASJ</span>
-                        <span class="block text-green-200 text-3xl sm:text-4xl font-light mt-2">Plataforma Integrada de Datos y Analítica en Salud para Jalisco</span>
-                    </h1>
-                    <p class="mt-6 text-xl text-green-100 max-w-2xl mx-auto md:mx-0">
-                        Unificando la información clínica para transformar la salud pública. Los datos ya existen, nosotros los conectamos.
-                    </p>
+                <!-- Menú móvil (simplificado) -->
+                <div class="sm:hidden flex items-center">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Abrir menú principal</span>
+                        <!-- Icono de menú -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
                 </div>
             </div>
-            <!-- Imagen de fondo abstracta -->
-            <div class="absolute inset-y-0 right-0 w-full md:w-3/5 overflow-hidden">
-                <!--  -->
-                <img class="absolute inset-0 w-full h-full object-cover opacity-20 md:opacity-100" 
-                     src="https://placehold.co/1200x800/000000/FFFFFF?text=Visualizacion+de+Datos" 
-                     alt="Visualización de datos de salud interconectados">
-                <div class="absolute inset-0 bg-gradient-to-r from-green-700 via-green-700 to-transparent md:hidden"></div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Sección Héroe -->
+        <section id="inicio" class="relative bg-green-800 text-white">
+            <div class="absolute inset-0">
+                <div class="absolute inset-0 bg-green-900 opacity-60"></div>
+            </div>
+            <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                    Plataforma Integrada de Datos y Analítica en Salud para Jalisco (PIDASJ)
+                </h1>
+                <p class="mt-6 text-xl text-green-100 max-w-3xl">
+                    Conectando la salud de Jalisco. Un paciente, un expediente, una red unificada.
+                </p>
+                <div class="mt-10">
+                    <a href="#solucion" class="inline-block bg-green-600 border border-transparent rounded-md py-3 px-8 text-base font-medium text-white hover:bg-green-700">
+                        Descubre la Solución
+                    </a>
+                </div>
             </div>
         </section>
 
         <!-- Sección Problema -->
         <section id="problema" class="py-16 sm:py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
-                    <div>
-                        <!--  -->
-                        <h2 class="text-base font-semibold text-green-600 uppercase tracking-wide">El Problema</h2>
-                        <h3 class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-                            Un Sistema que no se Comunica
-                        </h3>
-                        <p class="mt-6 text-lg text-gray-600">
-                            Actualmente, el sistema de salud en Jalisco sufre de fragmentación. Cada hospital, centro de salud y laboratorio utiliza sistemas distintos que no se comunican entre sí.
-                        </p>
-                        <p class="mt-4 text-lg text-gray-600">
-                            Esta "isla" de información genera duplicidad de estudios, retrasos en diagnósticos, decisiones sin evidencia consolidada y una pérdida de trazabilidad del paciente.
+                <div class="text-center">
+                    <h2 class="text-base font-semibold text-green-600 uppercase tracking-wide">El Problema</h2>
+                    <h3 class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
+                        Un Sistema de Salud Fragmentado
+                    </h3>
+                    <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-600">
+                        Hoy, los datos de los pacientes están atrapados en "silos". La información del Hospital Civil Viejo no se comunica con la del Hospital Civil Nuevo, y la de Zoquipan no es visible en Tonalá.
+                    </p>
+                </div>
+
+                <div class="mt-16 grid gap-10 md:grid-cols-3">
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+                        <h4 class="text-xl font-bold text-gray-900">Duplicidad de Estudios</h4>
+                        <p class="mt-2 text-base text-gray-600">
+                            Pacientes repiten tomografías, rayos X y análisis de laboratorio en cada hospital, generando costos innecesarios y retrasos.
                         </p>
                     </div>
-                    <!-- Estadísticas del Problema -->
-                    <div class="mt-10 lg:mt-0">
-                        <div class="space-y-8">
-                            <div class="flex">
-                                <div class="flex-shrink-0">
-                                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-600 text-white">
-                                        <!-- Icono Heroicons: currency-dollar -->
-                                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="ml-4">
-                                    <h4 class="text-2xl font-bold text-gray-900">30% de Gasto Perdido</h4>
-                                    <p class="mt-1 text-base text-gray-500">Del gasto hospitalario se pierde por ineficiencia, según la OCDE.</p>
-                                </div>
-                            </div>
-                            <div class="flex">
-                                <div class="flex-shrink-0">
-                                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-600 text-white">
-                                        <!-- Icono Heroicons: document-duplicate -->
-                                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="ml-4">
-                                    <h4 class="text-2xl font-bold text-gray-900">14.2% de Duplicidad</h4>
-                                    <p class="mt-1 text-base text-gray-500">En servicios de salud debido a la falta de un expediente clínico unificado.</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+                        <h4 class="text-xl font-bold text-gray-900">Decisiones a Ciegas</h4>
+                        <p class="mt-2 text-base text-gray-600">
+                            El personal médico atiende urgencias sin acceso al historial completo (alergias, medicamentos, cirugías previas) del paciente.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+                        <h4 class="text-xl font-bold text-gray-900">Ineficiencia Administrativa</h4>
+                        <p class="mt-2 text-base text-gray-600">
+                            La falta de datos consolidados dificulta la gestión de recursos, la vigilancia epidemiológica y la planeación estratégica.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección Solución (NUEVA) -->
+        <!-- Sección Impacto (NUEVA) -->
+        <section id="impacto" class="py-16 sm:py-24 bg-green-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-base font-semibold text-green-300 uppercase tracking-wide">Impacto Financiero</h2>
+                    <h3 class="mt-2 text-3xl font-extrabold text-white tracking-tight sm:text-4xl">
+                        El Costo de la Ineficiencia
+                    </h3>
+                    <p class="mt-4 max-w-3xl mx-auto text-xl text-green-100">
+                        La fragmentación no solo afecta la salud, sino que representa un desperdicio masivo de recursos públicos.
+                    </p>
+                </div>
+
+                <div class="mt-16 grid gap-10 md:grid-cols-2">
+                    <!-- Costo por Ineficiencia -->
+                    <div class="p-8 bg-green-800 rounded-lg shadow-lg">
+                        <h4 class="text-5xl font-extrabold text-white">$5.9 Mil Millones</h4>
+                        <p class="mt-3 text-xl font-medium text-green-200">Perdidos anualmente por Ineficiencia</p>
+                        <p class="mt-2 text-base text-green-300">
+                            Cerca del 30% del gasto en salud se desperdicia por ineficiencias estructurales, un problema que la interoperabilidad ataca directamente.
+                        </p>
+                        <p class="mt-4 text-sm text-green-400 italic">(Fuente: Estimación basada en datos OCDE)</p>
+                    </div>
+                    <!-- Costo por Duplicidad -->
+                    <div class="p-8 bg-green-800 rounded-lg shadow-lg">
+                        <h4 class="text-5xl font-extrabold text-white">$2.8 Mil Millones</h4>
+                        <p class="mt-3 text-xl font-medium text-green-200">Perdidos anualmente por Duplicidad</p>
+                        <p class="mt-2 text-base text-green-300">
+                            Un 14.2% del presupuesto se gasta de forma redundante debido a pacientes afiliados a múltiples sistemas que no se comunican.
+                        </p>
+                        <p class="mt-4 text-sm text-green-400 italic">(Fuente: Estimación basada en datos CONEVAL)</p>
+                    </div>
+                </div>
+                <div class="mt-12 text-center">
+                    <p class="text-lg text-green-200">PIDASJ optimiza este gasto, asegurando que cada peso se invierta en la atención al paciente.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Solución -->
         <section id="solucion" class="py-16 sm:py-24 bg-green-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
@@ -161,7 +190,7 @@
             </div>
         </section>
 
-        <!-- Sección Características (NUEVA) -->
+        <!-- Sección Características -->
         <section id="caracteristicas" class="py-16 sm:py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
@@ -276,7 +305,7 @@
                     </h3>
                     <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-600">
                         Así es como PIDASJ conecta los datos de un paciente entre las principales unidades médicas de la ciudad.
-                    </Fp>
+                    </p>
                 </div>
 
                 <!-- Simulación de Mapa -->
@@ -356,7 +385,7 @@
 
                     </div>
                     <p class="mt-6 text-center text-gray-600 italic">
-                        Un paciente visita el Hospital de Zoquipan. Sus datos (imágenes, labs, historial) están disponibles al instante en toda la red estatal.
+                        Un paciente visita el H. Zoquipan. Sus datos (imágenes, labs, historial) están disponibles al instante en el H. Civil Viejo, Nuevo y de Oriente.
                     </p>
                 </div>
             </div>
@@ -364,23 +393,28 @@
 
         <!-- Sección Cita / Slogan -->
         <section class="bg-green-800 text-white py-20">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <p class="text-3xl font-light italic leading-10">
+            <div class="max-w-3xl mx-auto text-center px-4">
+                <h2 class="text-3xl font-extrabold sm:text-4xl">
                     "No estamos soñando con el futuro de la salud digital; lo estamos construyendo desde Jalisco, hoy."
-                </p>
+                </h2>
             </div>
         </section>
+
     </main>
 
-    <!-- Pie de Página -->
-    <footer class="bg-gray-900 text-gray-400">
-        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
-            <p>&copy; 2025 PIDASJ - Plataforma Integrada de Datos y Analítica en Salud para Jalisco.</p>
-            <p class="mt-1 text-sm">Un proyecto para la innovación en la salud pública.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-base text-gray-400">
+                &copy; 2025 Proyecto PIDASJ. Todos los derechos reservados.
+            </p>
         </div>
     </footer>
 
 </body>
+</html>
+
+
 </html>
 
 
